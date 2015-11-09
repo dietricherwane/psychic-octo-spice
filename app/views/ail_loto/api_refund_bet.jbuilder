@@ -4,7 +4,6 @@ else
   json.bet do
     json.ticket_number @bet["ticketNumber"] rescue nil
     json.ref_number @bet["refNumber"] rescue nil
-    json.transaction_id @transaction_id rescue nil
     json.audit_number @bet["auditNumber"] rescue nil
     json.bet_cost_amount @bet["betCostAmount"] rescue nil
     json.bet_payout_amount @bet["betPayoutAmount"] rescue nil

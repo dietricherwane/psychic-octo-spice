@@ -1,16 +1,15 @@
-class AilPmuController < ApplicationController
-
+class AilLotoController < ApplicationController
   def set_credentials
-    @user_name = "pmu@test.co.za"
-    @password = "dljghh$fdhfd@dj"
-    @terminal_id = "100000"
+    @user_name = "lotto@test.co.za"
+    @password = "helloworld"
+    @terminal_id = "100001"
     @operator_id = "1"
     @operator_pin = "1"
     @audit_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s[0..8]
     @message_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s[0..7]
     @transaction_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s
     @user_id = "1"
-    @confirm_id = (AilPmu.last.transaction_id rescue "")
+    @confirm_id = (AilLoto.last.transaction_id rescue "")
     @date_time = DateTime.now.strftime("%Y-%m-%d %H:%M:%S")
   end
 
@@ -69,7 +68,7 @@ class AilPmuController < ApplicationController
 
     request.run
 
-    AilPmuLog.create(operation: 'Liste complète des tirages', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
+    AilLotoLog.create(operation: 'Liste complète des tirages', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
   end
 
   def api_place_bet
@@ -127,7 +126,7 @@ class AilPmuController < ApplicationController
               bet_cost_amount = (json_response["content"]["betCostAmount"] rescue nil)
               bet_payout_amount = (json_response["content"]["betPayoutAmount"] rescue nil)
 
-              ail_pmu = AilPmu.create(transaction_id: @transaction_id, message_id: @message_id, audit_number: @audit_id, date_time: @date_time, bet_code: @bet_code, bet_modifier: @bet_modifier, selector1: @selector1, selector2: @selector2, repeats: @repeats, normal_entries: @normal_entries, special_entries: @special_entries, ticket_number: ticket_number, ref_number: ref_number, bet_cost_amount: bet_cost_amount, bet_payout_amount: bet_payout_amount)
+              ail_loto = AilLoto.create(transaction_id: @transaction_id, message_id: @message_id, audit_number: @audit_id, date_time: @date_time, bet_code: @bet_code, bet_modifier: @bet_modifier, selector1: @selector1, selector2: @selector2, repeats: @repeats, normal_entries: @normal_entries, special_entries: @special_entries, ticket_number: ticket_number, ref_number: ref_number, bet_cost_amount: bet_cost_amount, bet_payout_amount: bet_payout_amount)
               body = %Q|{
                 "Ack":{
                   "revision":"1",
@@ -160,7 +159,7 @@ class AilPmuController < ApplicationController
                     @error_description = (json_response["content"]["errorMessage"] rescue nil)
 
                     if @error_code == 0 && (json_response["header"]["status"] == 'success' rescue nil)
-                      ail_pmu.update_attributes(placement_acknowledge: true, placement_acknowledge_date_time: DateTime.now.to_s)
+                      ail_loto.update_attributes(placement_acknowledge: true, placement_acknowledge_date_time: DateTime.now.to_s)
                     else
                       @error_code = '4005'
                       @error_description = 'Could not place the bet.'
@@ -193,7 +192,7 @@ class AilPmuController < ApplicationController
 
     request.run
 
-    AilPmuLog.create(operation: 'Prise de pari', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
+    AilLotoLog.create(operation: 'Prise de pari', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
   end
 
   def api_cancel_bet
@@ -203,7 +202,7 @@ class AilPmuController < ApplicationController
     @error_code = ''
     @error_description = ''
     response_body = ''
-    @bet = (AilPmu.where("transaction_id = '?' AND placement_acknowledge IS TRUE", params[:transaction_id]).first rescue nil)
+    @bet = (AilLoto.where("transaction_id = '?' AND placement_acknowledge IS TRUE", params[:transaction_id]).first rescue nil)
 
     if @bet.blank?
       @error_code = '4006'
@@ -313,7 +312,7 @@ class AilPmuController < ApplicationController
 
         request.run
 
-        AilPmuLog.create(operation: 'Annulation de pari', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
+        AilLotoLog.create(operation: 'Annulation de pari', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
       end
     end
   end
@@ -325,7 +324,7 @@ class AilPmuController < ApplicationController
     @error_code = ''
     @error_description = ''
     response_body = ''
-    @bet = (AilPmu.where("transaction_id = '?' AND placement_acknowledge IS TRUE AND cancellation_acknowledge IS NULL", params[:transaction_id]).first rescue nil)
+    @bet = (AilLoto.where("transaction_id = '?' AND placement_acknowledge IS TRUE AND cancellation_acknowledge IS NULL", params[:transaction_id]).first rescue nil)
 
     if @bet.blank?
       @error_code = '4006'
@@ -435,7 +434,7 @@ class AilPmuController < ApplicationController
 
         request.run
 
-        AilPmuLog.create(operation: 'Remboursement de pari', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
+        AilLotoLog.create(operation: 'Remboursement de pari', transaction_id: @transaction_id, error_code: @error_code, sent_params: body, response_body: response_body, remote_ip_address: remote_ip_address)
       end
     end
   end
