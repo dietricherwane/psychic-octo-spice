@@ -5,20 +5,21 @@
             <h5>Profil du parieur</h5>
             <span><%= @gamer.firstname %> <%= @gamer.lastname %></span>
         </div>
-
         <div class="clear"></div>
     </div>
 </div>
 
 <div class="line mt30"></div>
 
-<div class="statsRow">
-    <div class="wrapper">
+<div class="line"></div>
 
-    	<%= render "gamers/games_menu" %>
+  <div class="horControlB">
+    <ul>
+    	<li><a href="javascript:history.go(-1);" title=""><img src="<%= asset_path 'icons/control/16/archives.png' %>" alt=""><span>Retour</span></a></li>
+      </ul>
+  </div>
 
-    </div>
-</div>
+<div class="line"></div>
 
 <div class="line"></div>
 
