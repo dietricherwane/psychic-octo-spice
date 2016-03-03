@@ -2,7 +2,7 @@
 <div class="titleArea">
     <div class="wrapper">
         <div class="pageTitle">
-            <h5>Liste des paris LOTO</h5>
+            <h5>Liste des paris PMU PLR</h5>
             <span><%= @gamer.firstname %> <%= @gamer.lastname %> | <%= @gamer.uuid %> | <%= @gamer.email %></span>
         </div>
         <div class="clear"></div>
@@ -23,7 +23,7 @@
 <div class="wrapper">
   <%= flash_messages! %>
 <!-- Widgets -->
-  <%= form_tag(gamer_loto_bet_search_path, method: :post, :class => 'form') do %>
+  <%= form_tag(gamer_pmu_plr_bet_search_path, method: :post, :class => 'form') do %>
 
     <%= hidden_field_tag :uuid, @gamer.uuid %>
 
@@ -83,7 +83,7 @@
   <% end %>
 
   <div class="widget">
-    <div class="title"><img src="<%= asset_path 'icons/dark/full2.png' %>" alt="" class="titleIcon" /><h6>Liste des paris LOTO</h6></div>
+    <div class="title"><img src="<%= asset_path 'icons/dark/full2.png' %>" alt="" class="titleIcon" /><h6>Liste des paris PMU PLR</h6></div>
     <table cellpadding="0" cellspacing="0" border="0" class="display dTable taskWidget">
       <thead>
         <tr>
@@ -92,14 +92,13 @@
           <th>N° de Tick.</th>
           <th>N° de Trans.</th>
           <th>Montant</th>
-          <th>Mise</th>
           <th>Détails</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <% unless @loto_bets.blank? %>
-          <% @loto_bets.each do |bet| %>
+        <% unless @pmu_plr_bets.blank? %>
+          <% @pmu_plr_bets.each do |bet| %>
             <tr class="gradeA">
               <% css_class = (bet.bet_status == 'En cours' ? 'taskP' : (bet.bet_status == 'Gagnant' ? 'taskPr' : 'taskD')) %>
               <td class = "<%= css_class %>">
@@ -116,9 +115,6 @@
               </td>
               <td>
                 <%= bet.bet_cost_amount %>
-              </td>
-              <td>
-                <%= bet.basis_amount %>
               </td>
               <td class = "customInfo">
                 <span>
@@ -138,7 +134,7 @@
               </td>
 
               <td class = "actBtns">
-                <a href="<%= gamer_loto_bet_details_path(bet.id) %>" class="tipS" original-title="Détails"><%= image_tag('icons/color/user-black.png', alt: '') %></a>
+                <a href="<%= gamer_pmu_plr_bet_details_path(bet.id) %>" class="tipS" original-title="Détails"><%= image_tag('icons/color/user-black.png', alt: '') %></a>
               </td>
             </tr>
           <% end %>

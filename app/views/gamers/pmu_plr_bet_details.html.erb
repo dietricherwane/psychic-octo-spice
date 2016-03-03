@@ -28,7 +28,7 @@
       <div class="widget">
         <div class="title">
           <img src="<%= asset_path 'icons/dark/users.png' %>" alt="" class="titleIcon" />
-          <h6>Détails du pari - Loto</h6>
+          <h6>Détails du pari - PMU PLR</h6>
         </div>
 
         <div class="formRow">
@@ -48,7 +48,7 @@
           </div>
 
         <div class="formRow">
-          <label>Début de l'évènement</label>
+          <label>Début de la course</label>
           <div class="formRight">
             <b><%= @bet.begin_date %></b>
           </div>
@@ -56,7 +56,7 @@
         </div>
 
         <div class="formRow">
-          <label>Fin de l'évènement</label>
+          <label>Fin de la course</label>
           <div class="formRight">
             <b><%= @bet.end_date %></b>
           </div>
@@ -143,14 +143,6 @@
           <label>Montant du pari</label>
           <div class="formRight">
             <b><%= @bet.bet_cost_amount %></b>
-          </div>
-          <div class="clear"></div>
-        </div>
-
-        <div class="formRow">
-          <label>Mise de base</label>
-          <div class="formRight">
-            <b><%= @bet.basis_amount %></b>
           </div>
           <div class="clear"></div>
         </div>

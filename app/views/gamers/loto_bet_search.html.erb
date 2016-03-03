@@ -90,7 +90,8 @@
           <th>Statut</th>
           <th>N° de Réf.</th>
           <th>N° de Tick.</th>
-          <th>N° de Trans.</th>
+          <th>Montant du gain</th>
+          <th>Montant du remboursement</th>
           <th>Montant</th>
           <th>Mise</th>
           <th>Détails</th>
@@ -112,7 +113,10 @@
                 <%= bet.ticket_number %>
               </td>
               <td>
-                <%= bet.transaction_id %>
+                <%= bet.earning_amount.to_i %>
+              </td>
+              <td>
+                <%= bet.refund_amount.to_i %>
               </td>
               <td>
                 <%= bet.bet_cost_amount %>
@@ -122,7 +126,7 @@
               </td>
               <td class = "customInfo">
                 <span>
-                  <strong>Pari pris le </strong> <%= bet.bet_date %>
+                  <strong>Créé le </strong> <%= bet.bet_date %>
                 </span>
                 <% if bet.bet_cancelled %>
                   <span>
