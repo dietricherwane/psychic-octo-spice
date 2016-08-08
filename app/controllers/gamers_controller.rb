@@ -606,6 +606,334 @@ class GamersController < ApplicationController
     end
   end
 
+  def loto_postponed_winners
+    @transaction = AilLoto.find_by_transaction_id(params[:transaction_id])
+
+    if @transaction.blank?
+      redirect_to loto_winners_on_hold_path
+    else
+      @paymoney_amount = Parameters.first.postponed_winners_paymoney_default_amount
+      @cheque_amount = @transaction.earning_amount.to_f - @paymoney_amount
+      @gamer = User.find_by_uuid(@transaction.gamer_id)
+    end
+  end
+
+  def plr_postponed_winners
+    @transaction = AilPmu.find_by_transaction_id(params[:transaction_id])
+
+    if @transaction.blank?
+      redirect_to pmu_plr_winners_on_hold_path
+    else
+      @paymoney_amount = Parameters.first.postponed_winners_paymoney_default_amount
+      @cheque_amount = @transaction.earning_amount.to_f - @paymoney_amount
+      @gamer = User.find_by_uuid(@transaction.gamer_id)
+    end
+  end
+
+  def sportcash_postponed_winners
+    @transaction = Bet.find_by_transaction_id(params[:transaction_id])
+
+    if @transaction.blank?
+      redirect_to spc_winners_on_hold_path
+    else
+      @paymoney_amount = Parameters.first.postponed_winners_paymoney_default_amount
+      @cheque_amount = @transaction.win_amount.to_f - @paymoney_amount
+      @gamer = User.find_by_uuid(@transaction.gamer_id)
+    end
+  end
+
+  def alr_postponed_winners
+    @transaction = Cm.find_by_sale_client_id(params[:transaction_id])
+
+    if @transaction.blank?
+      redirect_to cm_winners_on_hold_path
+    else
+      @paymoney_amount = Parameters.first.postponed_winners_paymoney_default_amount
+      @cheque_amount = @transaction.win_amount.to_f - @paymoney_amount
+      @gamer = User.find_by_uuid(@transaction.game_account_token)
+    end
+  end
+
+  def process_loto_postponed_winners
+    @transaction = AilLoto.find_by_transaction_id(params[:transaction_id])
+    @identity_number = params[:identity_number]
+    @cheque_id = params[:cheque_id]
+    @paymoney_account_number = params[:paymoney_account_number]
+    @payment_type = params[:transaction_type]
+
+    if @transaction.blank?
+      flash[:error] = "La transaction n'a pas été trouvée"
+      redirect_to loto_winners_on_hold_path
+    else
+      init_postponed_winners
+
+      if check_required_fields
+        if postponed_winners_check_paymoney_account
+          @delayed_payment = DelayedPayment.create(game: 'LOTO', transaction_type: (@payment_type == 'Paiement total' ? 'Paiement total' : 'Paiement partiel'), transaction_id: @transaction.transaction_id, ticket_id: @transaction.ticket_number, firstname: params[:firstname], lastname: params[:lastname], cheque_id: @cheque_id, cheque_amount: @cheque_amount, identity_number: @identity_number, paymoney_amount: @paymoney_amount, paymoney_account_number: @paymoney_account_number, winner_paymoney_account_request: @paymoney_token_url, winner_paymoney_account_response: @paymoney_token, bet_amount: @transaction.bet_cost_amount, bet_placed_at: @transaction.created_at.strftime("%d-%m-%Y") + " à " + @transaction.created_at.strftime("%Hh %Mmn"))
+          # Débit du compte TRJ et crédit du compte Paymoney
+          if paymoney_credit
+            if credit_pos_account
+              @transaction.update_attributes(bet_status: 'Gagnant', on_hold_winner_paid_at: DateTime.now)
+              flash[:success] = "Le dépôt a été effectué avec succès"
+              redirect_to loto_winners_on_hold_path
+            else
+              flash.now[:error] = "Le compte chèque n'a pas pu être crédité"
+              render :loto_postponed_winners
+            end
+          else
+            flash.now[:error] = "Le compte du parieur n'a pas pu être crédité"
+            render :loto_postponed_winners
+          end
+        else
+          flash.now[:error] = "Le numéro de compte Paymoney n'a pas été trouvé"
+          render :loto_postponed_winners
+        end
+      else
+        flash.now[:error] = 'Veuillez renseigner tous les champs'
+        render :loto_postponed_winners
+      end
+    end
+  end
+
+  def process_plr_postponed_winners
+    @transaction = AilPmu.find_by_transaction_id(params[:transaction_id])
+    @identity_number = params[:identity_number]
+    @cheque_id = params[:cheque_id]
+    @paymoney_account_number = params[:paymoney_account_number]
+    @payment_type = params[:transaction_type]
+
+    if @transaction.blank?
+      flash[:error] = "La transaction n'a pas été trouvée"
+      redirect_to pmu_plr_winners_on_hold_path
+    else
+      init_postponed_winners
+
+      if check_required_fields
+        if postponed_winners_check_paymoney_account
+          @delayed_payment = DelayedPayment.create(game: 'PMU PLR', transaction_type: (@payment_type == 'Paiement total' ? 'Paiement total' : 'Paiement partiel'), transaction_id: @transaction.transaction_id, ticket_id: @transaction.ticket_number, firstname: params[:firstname], lastname: params[:lastname], cheque_id: @cheque_id, cheque_amount: @cheque_amount, identity_number: @identity_number, paymoney_amount: @paymoney_amount, paymoney_account_number: @paymoney_account_number, winner_paymoney_account_request: @paymoney_token_url, winner_paymoney_account_response: @paymoney_token, bet_amount: @transaction.bet_cost_amount, bet_placed_at: @transaction.created_at.strftime("%d-%m-%Y") + " à " + @transaction.created_at.strftime("%Hh %Mmn"))
+          # Débit du compte TRJ et crédit du compte Paymoney
+          if paymoney_credit
+            if credit_pos_account
+              @transaction.update_attributes(bet_status: 'Gagnant', on_hold_winner_paid_at: DateTime.now)
+              flash[:success] = "Le dépôt a été effectué avec succès"
+              redirect_to pmu_plr_winners_on_hold_path
+            else
+              flash.now[:error] = "Le compte chèque n'a pas pu être crédité"
+              render :plr_postponed_winners
+            end
+          else
+            flash.now[:error] = "Le compte du parieur n'a pas pu être crédité"
+            render :plr_postponed_winners
+          end
+        else
+          flash.now[:error] = "Le numéro de compte Paymoney n'a pas été trouvé"
+          render :plr_postponed_winners
+        end
+      else
+        flash.now[:error] = 'Veuillez renseigner tous les champs'
+        render :plr_postponed_winners
+      end
+    end
+  end
+
+  def process_sportcash_postponed_winners
+    @transaction = Bet.find_by_transaction_id(params[:transaction_id])
+    @identity_number = params[:identity_number]
+    @cheque_id = params[:cheque_id]
+    @paymoney_account_number = params[:paymoney_account_number]
+    @payment_type = params[:transaction_type]
+
+    if @transaction.blank?
+      flash[:error] = "La transaction n'a pas été trouvée"
+      redirect_to spc_winners_on_hold_path
+    else
+      init_sportcash_postponed_winners
+
+      if check_required_fields
+        if postponed_winners_check_paymoney_account
+          @delayed_payment = DelayedPayment.create(game: 'SPORTCASH', transaction_type: (@payment_type == 'Paiement total' ? 'Paiement total' : 'Paiement partiel'), transaction_id: @transaction.transaction_id, ticket_id: @transaction.ticket_id, firstname: params[:firstname], lastname: params[:lastname], cheque_id: @cheque_id, cheque_amount: @cheque_amount, identity_number: @identity_number, paymoney_amount: @paymoney_amount, paymoney_account_number: @paymoney_account_number, winner_paymoney_account_request: @paymoney_token_url, winner_paymoney_account_response: @paymoney_token, bet_amount: @transaction.amount, bet_placed_at: @transaction.created_at.strftime("%d-%m-%Y") + " à " + @transaction.created_at.strftime("%Hh %Mmn"))
+          # Débit du compte TRJ et crédit du compte Paymoney
+          if paymoney_credit
+            if credit_pos_account
+              @transaction.update_attributes(bet_status: 'Gagnant', on_hold_winner_paid_at: DateTime.now)
+              flash[:success] = "Le dépôt a été effectué avec succès"
+              redirect_to spc_winners_on_hold_path
+            else
+              flash.now[:error] = "Le compte chèque n'a pas pu être crédité"
+              render :sportcash_postponed_winners
+            end
+          else
+            flash.now[:error] = "Le compte du parieur n'a pas pu être crédité"
+            render :sportcash_postponed_winners
+          end
+        else
+          flash.now[:error] = "Le numéro de compte Paymoney n'a pas été trouvé"
+          render :sportcash_postponed_winners
+        end
+      else
+        flash.now[:error] = 'Veuillez renseigner tous les champs'
+        render :sportcash_postponed_winners
+      end
+    end
+  end
+
+  def process_alr_postponed_winners
+    @transaction = Cm.find_by_sale_client_id(params[:transaction_id])
+    @identity_number = params[:identity_number]
+    @cheque_id = params[:cheque_id]
+    @paymoney_account_number = params[:paymoney_account_number]
+    @payment_type = params[:transaction_type]
+
+    if @transaction.blank?
+      flash[:error] = "La transaction n'a pas été trouvée"
+      redirect_to cm_winners_on_hold_path
+    else
+      init_alr_postponed_winners
+
+      if check_required_fields
+        if postponed_winners_check_paymoney_account
+          @delayed_payment = DelayedPayment.create(game: 'PMU ALR', transaction_type: (@payment_type == 'Paiement total' ? 'Paiement total' : 'Paiement partiel'), transaction_id: @transaction.sale_client_id, ticket_id: @transaction.serial_number, firstname: params[:firstname], lastname: params[:lastname], cheque_id: @cheque_id, cheque_amount: @cheque_amount, identity_number: @identity_number, paymoney_amount: @paymoney_amount, paymoney_account_number: @paymoney_account_number, winner_paymoney_account_request: @paymoney_token_url, winner_paymoney_account_response: @paymoney_token, bet_amount: @transaction.amount, bet_placed_at: @transaction.created_at.strftime("%d-%m-%Y") + " à " + @transaction.created_at.strftime("%Hh %Mmn"))
+          # Débit du compte TRJ et crédit du compte Paymoney
+          if paymoney_credit
+            if credit_pos_account
+              @transaction.update_attributes(bet_status: 'Gagnant', on_hold_winner_paid_at: DateTime.now)
+              flash[:success] = "Le dépôt a été effectué avec succès"
+              redirect_to cm_winners_on_hold_path
+            else
+              flash.now[:error] = "Le compte chèque n'a pas pu être crédité"
+              render :alr_postponed_winners
+            end
+          else
+            flash.now[:error] = "Le compte du parieur n'a pas pu être crédité"
+            render :alr_postponed_winners
+          end
+        else
+          flash.now[:error] = "Le numéro de compte Paymoney n'a pas été trouvé"
+          render :alr_postponed_winners
+        end
+      else
+        flash.now[:error] = 'Veuillez renseigner tous les champs'
+        render :alr_postponed_winners
+      end
+
+    end
+  end
+
+  def check_required_fields
+    status = true
+    if @identity_number.blank? || @cheque_id.blank? || @paymoney_account_number.blank?
+      status = false
+    end
+
+    return status
+  end
+
+  def init_postponed_winners
+    @gamer = User.find_by_uuid(@transaction.gamer_id)
+    params[:identity_number] = params[:identity_number]
+    params[:cheque_id] = params[:cheque_id]
+    params[:paymoney_account_number] = params[:paymoney_account_number]
+    if @payment_type == 'Paiement total'
+      @paymoney_amount = 0
+      @cheque_amount = @transaction.earning_amount.to_f
+    else
+      @paymoney_amount = Parameters.first.postponed_winners_paymoney_default_amount
+      @cheque_amount = @transaction.earning_amount.to_f - @paymoney_amount
+    end
+  end
+
+  def init_sportcash_postponed_winners
+    @gamer = User.find_by_uuid(@transaction.gamer_id)
+    params[:identity_number] = params[:identity_number]
+    params[:cheque_id] = params[:cheque_id]
+    params[:paymoney_account_number] = params[:paymoney_account_number]
+    if @payment_type == 'Paiement total'
+      @paymoney_amount = 0
+      @cheque_amount = @transaction.win_amount.to_f
+    else
+      @paymoney_amount = Parameters.first.postponed_winners_paymoney_default_amount
+      @cheque_amount = @transaction.win_amount.to_f - @paymoney_amount
+    end
+  end
+
+  def init_alr_postponed_winners
+    @gamer = User.find_by_uuid(@transaction.game_account_token)
+    params[:identity_number] = params[:identity_number]
+    params[:cheque_id] = params[:cheque_id]
+    params[:paymoney_account_number] = params[:paymoney_account_number]
+    if @payment_type == 'Paiement total'
+      @paymoney_amount = 0
+      @cheque_amount = @transaction.win_amount.to_f
+    else
+      @paymoney_amount = Parameters.first.postponed_winners_paymoney_default_amount
+      @cheque_amount = @transaction.win_amount.to_f - @paymoney_amount
+    end
+  end
+
+  def postponed_winners_check_paymoney_account
+    status = true
+    @paymoney_token_url = Parameters.first.paymoney_url + "/PAYMONEY_WALLET/rest/check2_compte/#{@paymoney_account_number}"
+    @paymoney_token = RestClient.get(@paymoney_token_url) rescue nil
+
+    if @paymoney_token.blank? || @paymoney_token == 'null'
+      status = false
+    end
+
+    return status
+  end
+
+  def paymoney_credit
+    status = true
+
+    if @paymoney_amount != 0
+      transaction_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s
+
+        paymoney_credit_request = Parameters.first.paymoney_wallet_url + "/api/86d1798bc43ed59e5207c68e864564/earnings/pay/TRJ/#{@paymoney_token}/#{transaction_id}/#{@paymoney_amount}"
+        paymoney_credit_response = RestClient.get(paymoney_credit_request) rescue nil
+
+      if paymoney_credit_response.blank? || paymoney_credit_response.include?('|')
+        status = false
+      end
+    end
+
+    @delayed_payment.update_attributes(paymoney_credit_request: paymoney_credit_request, paymoney_credit_response: paymoney_credit_response, paymoney_credit_status: status)
+
+    return status
+  end
+
+  def credit_pos_account
+    status = true
+    transaction_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s
+    cheque_credit_request = Parameters.first.paymoney_wallet_url + "/api/86d1798bc43ed59e5207c68e864564/earnings/pay/TRJ/wFBKENwq/#{transaction_id}/#{@cheque_amount}"
+    cheque_credit_response = RestClient.get(cheque_credit_request) rescue nil
+
+    if cheque_credit_response.blank? || cheque_credit_response.include?('|')
+      payback_paymoney_credit
+      status = false
+    end
+
+    @delayed_payment.update_attributes(cheque_credit_request: cheque_credit_request, cheque_credit_response: cheque_credit_response, cheque_credit_status: status)
+
+    return status
+  end
+
+  def payback_paymoney_credit
+    status = true
+    transaction_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s
+    payback_request = Parameters.first.paymoney_wallet_url + "/api/86d1798bc43ed59e5207c68e864564/earnings/pay/#{@paymoney_token}/TRJ/#{transaction_id}/#{@paymoney_amount}"
+    payback_response = RestClient.get(payback_request) rescue nil
+
+    if payback_response.blank? || payback_response.include?('|')
+      status = false
+    end
+
+    @delayed_payment.update_attributes(payback_request: payback_request, payback_response: payback_response, payback_status: status)
+  end
+
+  def list_postponed_winners
+    @delayed_payments = DelayedPayment.where("cheque_credit_status IS TRUE AND paymoney_credit_status IS TRUE").order("created_at DESC")
+  end
+
   private
     def set_loto_search_params
       @sql_begin_date = ""
