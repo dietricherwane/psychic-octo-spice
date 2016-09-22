@@ -253,6 +253,25 @@ ActiveRecord::Schema.define(version: 20160921223051) do
     t.string   "amount"
   end
 
+  create_table "bet_coupons_backup", id: false, force: true do |t|
+    t.integer  "id"
+    t.integer  "bet_id"
+    t.string   "pal_code"
+    t.string   "event_code"
+    t.string   "bet_code"
+    t.string   "draw_code"
+    t.string   "odd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "begin_date"
+    t.string   "teams"
+    t.string   "sport"
+    t.string   "is_fix"
+    t.string   "handicap"
+    t.string   "flag_bonus"
+    t.string   "amount"
+  end
+
   create_table "bets", force: true do |t|
     t.string   "license_code"
     t.string   "pos_code"
