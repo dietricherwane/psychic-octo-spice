@@ -8,7 +8,7 @@ class EpplController < ApplicationController
 
   def check_ip
     remote_ip_address = request.remote_ip
-    if !(['94.247.179.9', '172.18.2.12', ' 192.168.1.41', '82.97.38.138', '41.21.163.46', '195.14.0.128'].include?(remote_ip_address) rescue false)
+    if !(['149.202.202.26', '94.247.179.9', '172.18.2.12', ' 192.168.1.41', '82.97.38.138', '41.21.163.46', '195.14.0.128'].include?(remote_ip_address) rescue false)
       render text: 'moron'
     end
   end
