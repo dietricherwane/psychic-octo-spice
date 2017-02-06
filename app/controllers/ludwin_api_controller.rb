@@ -1,5 +1,5 @@
 class LudwinApiController < ApplicationController
-  #before_filter :check_ip, only: [:api_list_sports, :api_show_sport, :api_list_tournaments, :api_show_tournament, :api_list_prematch_data, :api_list_live_data, :api_list_prematch_data_delta, :api_list_live_data_delta, :api_list_bets, :api_show_bet, :api_sell_coupon, :api_m_sell_coupon, :api_system_bet_placement, :api_last_request_log, :api_cancel_coupon, :api_coupon_payment_notification, :api_coupon_status, :api_gamer_bets]
+  before_filter :check_ip, only: [:api_list_sports, :api_show_sport, :api_list_tournaments, :api_show_tournament, :api_list_prematch_data, :api_list_live_data, :api_list_prematch_data_delta, :api_list_live_data_delta, :api_list_bets, :api_show_bet, :api_sell_coupon, :api_m_sell_coupon, :api_system_bet_placement, :api_last_request_log, :api_cancel_coupon, :api_coupon_payment_notification, :api_coupon_status, :api_gamer_bets]
 
   @@url = 'https://services.sports4africa.com/Ussd' # prod
   #@@url = 'https://test.sports4africa.com/testUSSD' # test
