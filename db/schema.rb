@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170222183524) do
-=======
 ActiveRecord::Schema.define(version: 20170307084256) do
->>>>>>> 292216530d855cb8fa5fa9015a491c9cedcbc32c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -664,10 +660,7 @@ ActiveRecord::Schema.define(version: 20170307084256) do
     t.string   "paymoney_account_number"
     t.string   "operation"
     t.string   "bet_status"
-<<<<<<< HEAD
-=======
     t.string   "paymoney_destination_account"
->>>>>>> 292216530d855cb8fa5fa9015a491c9cedcbc32c
   end
 
   create_table "game_tokens", force: true do |t|
