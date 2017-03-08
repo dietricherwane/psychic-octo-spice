@@ -4,6 +4,8 @@
     <thead>
       <tr>
         <th>Operation</th>
+        <th>Statut</th>
+        <th>Jeu</th>
         <th>N° de cpt. Paymoney</th>
         <th>N° de trans.</th>
         <th>Montant de trans.</th>
@@ -17,6 +19,12 @@
           <tr class="gradeA">
             <td class = "taskPr">
               <%= bet.operation %>
+            </td>
+            <td>
+              <%= bet.bet_status %>
+            </td>
+            <td>
+              <%= EpplGame.find_by_code(bet.game_id).label rescue '' %>
             </td>
             <td>
               <%= bet.paymoney_account_number %>

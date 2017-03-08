@@ -39,11 +39,19 @@
           <div class="clear"></div>
         </div>
 
+        <div class="formRow">
+          <label>Statut</label>
+          <div class="formRight">
+            <b><%= @bet.bet_status %></b>
+          </div>
+          <div class="clear"></div>
+        </div>
+
         <% unless @bet.game_id.blank? %>
           <div class="formRow">
-            <label>Code du jeu</label>
+            <label>Nom du jeu</label>
             <div class="formRight">
-              <b><%= @bet.game_id %></b>
+              <b><%= EpplGame.find_by_code(@bet.game_id).label rescue nil %></b>
             </div>
             <div class="clear"></div>
           </div>
