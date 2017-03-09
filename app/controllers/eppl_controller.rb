@@ -4,7 +4,7 @@ class EpplController < ApplicationController
 # Transfert de gains - paiement de gains eppl, du compte eppl vers son compte paymoney
 # Transfert de gains - rejouer à eppl compte TRJ, prise de paris TRJ débité pour créditer le compte eppl
 
-  before_filter :check_ip, only: [:charge_eppl_account, :api_place_bet, :api_pay_earning, :api_transfer_earning, :api_recharge_eppl_account]
+#  before_filter :check_ip, only: [:charge_eppl_account, :api_place_bet, :api_pay_earning, :api_transfer_earning, :api_recharge_eppl_account]
 
   def check_ip
     remote_ip_address = request.remote_ip
