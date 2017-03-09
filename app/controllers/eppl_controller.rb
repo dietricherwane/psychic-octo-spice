@@ -94,6 +94,7 @@ class EpplController < ApplicationController
     end_date = params[:end_date]
     gamer_id = params[:gamer_id]
     bet_status = params[:bet_status]
+    ticket_id = params[:ticket_id]
 
     if gamer_id.blank?
       @eppl = Eppl.create(operation: "Prise de pari", transaction_id: Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s[0..17], paymoney_account_number: params[:paymoney_account_number], transaction_amount: @transaction_amount, remote_ip: @remote_ip, game_id: params[:game_id], game_account_token: @game_account_token, begin_date: begin_date, bet_placed: true, bet_placed_at: DateTime.now, paymoney_transaction_id: Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s)
@@ -103,7 +104,7 @@ class EpplController < ApplicationController
         @error_code = '3000'
         @error_description = "L'identifiant du parieur n'a pas été trouvé."
       else
-        @eppl = Eppl.create(operation: "Prise de pari", transaction_id: Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s[0..17], paymoney_account_number: params[:paymoney_account_number], transaction_amount: @transaction_amount, remote_ip: @remote_ip, game_id: params[:game_id], game_account_token: @game_account_token, begin_date: begin_date, bet_placed: true, bet_placed_at: DateTime.now, paymoney_transaction_id: Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s, gamer_id: gamer_id, bet_status: (bet_status == "473c94" ? "Gagnant" : "Perdant"))
+        @eppl = Eppl.create(operation: "Prise de pari", transaction_id: Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s[0..17], paymoney_account_number: params[:paymoney_account_number], transaction_amount: @transaction_amount, remote_ip: @remote_ip, game_id: params[:game_id], game_account_token: @game_account_token, begin_date: begin_date, bet_placed: true, bet_placed_at: DateTime.now, paymoney_transaction_id: Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s, gamer_id: gamer_id, bet_status: (bet_status == "473c94" ? "Gagnant" : "Perdant"), ticket_id: ticket_id)
       end
     end
     #if @user.blank?
