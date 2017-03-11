@@ -186,6 +186,7 @@ class EpplController < ApplicationController
     paymoney_account_number = params[:paymoney_account_number]
     paymoney_account_token = check_account_number(params[:paymoney_account_number])
     transaction_amount = params[:transaction_amount]
+    gamer_id = params[:gamer_id]
 
     transaction_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s[0..17]
 
@@ -204,7 +205,7 @@ class EpplController < ApplicationController
             response_body = response.body
 
             if !response_body.include?("|")
-              Eppl.create(operation: "Transfert de gains", bet_validated: true, transaction_id: response_body, paymoney_account_number: paymoney_account_number, transaction_amount: transaction_amount, game_account_token: "PExxGeLY", bet_placed_at: DateTime.now) rescue nil
+              Eppl.create(operation: "Transfert de gains", bet_validated: true, transaction_id: response_body, paymoney_account_number: paymoney_account_number, transaction_amount: transaction_amount, game_account_token: "PExxGeLY", bet_placed_at: DateTime.now, gamer_id: gamer_id) rescue nil
               @response_body = response_body
               @error_code = ""
               @error_description = ""

@@ -220,6 +220,7 @@ Rails.application.routes.draw do
 
   # Transfer
   get '/eppl/api/87eik741fd/earning/transfer/:paymoney_account_number/:transaction_amount' => 'eppl#api_transfer_earning'
+  get '/eppl/api/87eik741fd/earning/transfer/:paymoney_account_number/:gamer_id/:transaction_amount' => 'eppl#api_transfer_earning'
 
   # Recharge eppl account
   get '/eppl/api/ok478j41fd/account/reload/:transaction_amount' => 'eppl#api_recharge_eppl_account'
