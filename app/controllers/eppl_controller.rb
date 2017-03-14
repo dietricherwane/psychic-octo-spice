@@ -234,6 +234,7 @@ class EpplController < ApplicationController
     paymoney_wallet_url = Parameters.first.paymoney_wallet_url rescue ""
     @transaction_amount = params[:transaction_amount]
     paymoney_account = params[:paymoney_account]
+    gamer_id = params[:gamer_id]
 
     transaction_id = Digest::SHA1.hexdigest([DateTime.now.iso8601(6), rand].join).hex.to_s[0..17]
 
@@ -253,7 +254,7 @@ class EpplController < ApplicationController
               @error_code = ""
               @error_description = ""
 
-              Eppl.create(operation: "Rechargement de compte", bet_validated: true, transaction_id: response_body, paymoney_account_number: "TRJ", transaction_amount: @transaction_amount, game_account_token: "PExxGeLY", bet_placed_at: DateTime.now, gamer_id: @gamer_id, paymoney_destination_account: paymoney_account) rescue nil
+              Eppl.create(operation: "Rechargement de compte", bet_validated: true, transaction_id: response_body, paymoney_account_number: "TRJ", transaction_amount: @transaction_amount, game_account_token: "PExxGeLY", bet_placed_at: DateTime.now, gamer_id: gamer_id, paymoney_destination_account: paymoney_account) rescue nil
             else
               case response_body
                 when "|0|"
