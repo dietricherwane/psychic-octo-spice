@@ -225,6 +225,7 @@ Rails.application.routes.draw do
   # Recharge eppl account
   get '/eppl/api/ok478j41fd/account/reload/:transaction_amount' => 'eppl#api_recharge_eppl_account'
   get '/eppl/api/ok478j41fd/account/reload/:paymoney_account/:transaction_amount' => 'eppl#api_recharge_eppl_account'
+  get '/eppl/api/ok478j41fd/account/reload/:gamer_id/:paymoney_account/:transaction_amount' => 'eppl#api_recharge_eppl_account'
   #---------------------EPPL---------------------
 
   #---------------------CM3---------------------
