@@ -38,13 +38,13 @@ class UsersController < ApplicationController
   end
 
   def api_reset_password
-    @user = User.where("msisdn = '#{params[:parameter]}' OR id = #{params[:parameter].to_i} OR email = '#{params[:parameter]}'")
+    @user = User.where("msisdn = '#{params[:parameter]}' OR id = #{params[:parameter].to_i} OR email = '#{params[:parameter]}'").first rescue nil
 
     if @user.blank?
       render text: %Q({"errors":[{"message":"Cet utilisateur n'a pas été trouvé"}]})
     else
-      @user.first.update_attribute(:reset_password_token, SecureRandom.hex)
-      ResetPassword.send_reset_password_email(@user.first.email, (Parameters.first.reset_password_url.to_s + @user.first.reset_password_token)).deliver
+      @user.update_attribute(:reset_password_token, SecureRandom.hex)
+      ResetPassword.send_reset_password_email(@user.email, (Parameters.first.reset_password_url.to_s + @user.reset_password_token)).deliver
     end
   end
 
