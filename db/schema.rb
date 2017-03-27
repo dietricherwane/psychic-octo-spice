@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309104014) do
+ActiveRecord::Schema.define(version: 20170327223535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -742,6 +742,11 @@ ActiveRecord::Schema.define(version: 20170309104014) do
     t.string   "hub_front_office_url"
     t.float    "postponed_winners_paymoney_default_amount"
     t.string   "paymoney_url"
+    t.string   "cm3_server_url"
+    t.string   "cm3_hub_notification_url"
+    t.string   "cm3_notification_url"
+    t.string   "cm3_username"
+    t.string   "cm3_password"
   end
 
   create_table "pmu_bet_types", force: true do |t|
