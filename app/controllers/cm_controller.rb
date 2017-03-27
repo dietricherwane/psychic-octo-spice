@@ -351,11 +351,11 @@ class CmController < ApplicationController
             end
           end
 
-          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body, connection_id: @connection_id)
+          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body.force_encoding("UTF-8"), connection_id: @connection_id) rescue nil
         else
           @error_code = '3007'
           @error_description = "Aucun pari selectionné."
-          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body, get_eval_code: @response_code, connection_id: @connection_id)
+          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body.force_encoding("UTF-8"), get_eval_code: @response_code, connection_id: @connection_id) rescue nil
 
           reset_connection_id(error_code)
         end
