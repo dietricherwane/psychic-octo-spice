@@ -10,12 +10,16 @@ class CmController < ApplicationController
 
   before_filter :check_ip, only: [:api_current_session, :api_get_program, :api_get_race, :api_get_bet, :api_get_results, :api_get_dividends, :api_evaluate_game, :api_sell_ticket, :api_cancel_ticket, :api_notify_session, :api_notify_program, :api_notify_race, :api_gamer_bets]
 
-  @@user_name = "ngser@lonaci"
-  @@password = "nglonaci@2016"
-  @@notification_url = "http://172.18.2.11/api/dc4741d1b1/"
-  @@hub_notification_url = "http://parionsdirect.ci" # URL vers la plateforme de Moïse
+  @@user_name = Parameters.first.cm3_username
+  @@password = Parameters.first.cm3_password
+  @@notification_url = Parameters.first.cm3_notification_url
+  @@hub_notification_url = Parameters.first.cm3_hub_notification_url # URL vers la plateforme de Moïse
   #@@cm3_server_url = "http://office.cm3.work:27000"
+<<<<<<< HEAD
   @@cm3_server_url = "http://172.18.1.41:29000"
+=======
+  @@cm3_server_url = Parameters.first.cm3_server_url
+>>>>>>> 6a210acd0ae6d08fe3128e42d3484a80344d7c3b
 
   def check_ip
     remote_ip_address = request.remote_ip
