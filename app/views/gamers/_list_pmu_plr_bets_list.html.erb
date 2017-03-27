@@ -8,6 +8,7 @@
         <th>N° de Tick.</th>
         <th>N° de Trans.</th>
         <th>Montant du pari</th>
+        <th>Montant du gain</th>
         <th>Détails</th>
         <th>Actions</th>
       </tr>
@@ -27,10 +28,13 @@
               <%= bet.ticket_number %>
             </td>
             <td>
-              <%= bet.transaction_id %>
+              <%= bet.transaction_id[0..7] rescue nil %>...
             </td>
             <td>
               <%= number_with_delimiter(bet.bet_cost_amount) %>
+            </td>
+            <td>
+              <%= number_with_delimiter(bet.earning_amount) %>
             </td>
             <td class = "customInfo">
               <span>
