@@ -8,7 +8,7 @@ class CmController < ApplicationController
   #before_action :only => :guard do |s| s.get_service_by_token(params[:currency], params[:service_token], params[:operation_token], params[:order], params[:transaction_amount], params[:id]) end
   before_action :ensure_login, only: [:api_current_session, :api_get_program, :api_get_race, :api_get_bet, :api_get_results, :api_get_dividends, :api_evaluate_game, :api_sell_ticket, :api_cancel_ticket, :api_get_winners]
 
-  before_filter :check_ip, only: [:api_current_session, :api_get_program, :api_get_race, :api_get_bet, :api_get_results, :api_get_dividends, :api_evaluate_game, :api_sell_ticket, :api_cancel_ticket, :api_notify_session, :api_notify_program, :api_notify_race, :api_gamer_bets]
+  #before_filter :check_ip, only: [:api_current_session, :api_get_program, :api_get_race, :api_get_bet, :api_get_results, :api_get_dividends, :api_evaluate_game, :api_sell_ticket, :api_cancel_ticket, :api_notify_session, :api_notify_program, :api_notify_race, :api_gamer_bets]
 
   @@user_name = "ngser@lonaci"
   @@password = "nglonaci@2016"
@@ -351,11 +351,11 @@ class CmController < ApplicationController
             end
           end
 
-          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body, connection_id: @connection_id)
+          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body.force_encoding("UTF-8"), connection_id: @connection_id) rescue nil
         else
           @error_code = '3007'
           @error_description = "Aucun pari selectionné."
-          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body, get_eval_code: @response_code, connection_id: @connection_id)
+          CmLog.create(operation: "Evaluate game", get_eval_request: body, get_eval_response: @response_body.force_encoding("UTF-8"), get_eval_code: @response_code, connection_id: @connection_id) rescue nil
 
           reset_connection_id(error_code)
         end
