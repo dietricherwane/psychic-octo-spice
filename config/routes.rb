@@ -293,6 +293,7 @@ Rails.application.routes.draw do
   # Administration
   get '/administrator/gamers' => 'gamers#index', as: :gamers
   get '/administrator/gamer/profile/:gamer_id' => 'gamers#profile', as: :gamer_profile
+  post '/administrator/gamer/search' => 'gamers#search', as: :gamers_search
 
   get '/administrator/gamer/loto/:gamer_id' => 'gamers#loto_bets', as: :gamer_loto_bets
   get '/administrator/gamer/loto/bet_details/:bet_id' => 'gamers#loto_bet_details', as: :gamer_loto_bet_details

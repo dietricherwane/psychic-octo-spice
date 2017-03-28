@@ -17,6 +17,26 @@ class GamersController < ApplicationController
     @unconfirmed_accounts = @gamers.where("confirmed_at IS NULL").count
   end
 
+  def search
+    @class_gamers = "current"
+    @begin_date = params[:begin_date]
+    @end_date = params[:end_date]
+    @status = params[:status_id]
+
+    params[:begin_date] = @begin_date
+    params[:end_date] = @end_date
+    params[:status_id] = @status
+
+    set_gamers_search_params
+
+    @gamers = User.where("#{@sql_begin_date} #{@sql_begin_date.blank? ? '' : 'AND'} #{@sql_end_date} #{@sql_end_date.blank? ? '' : 'AND'} #{@sql_status}").order("created_at DESC")
+    flash[:success] = "#{@gamers.count} Résultat(s) trouvé(s)."
+
+    if params[:commit] == "Exporter"
+      send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
+    end
+  end
+
   def export_gamers_list
     @users = User.all
 
@@ -935,6 +955,23 @@ class GamersController < ApplicationController
   end
 
   private
+    def set_gamers_search_params
+      @sql_begin_date = ""
+      @sql_end_date = ""
+      @sql_status = ""
+
+      unless @begin_date.blank?
+        @sql_begin_date = "created_at::date >= '#{@begin_date}'"
+      end
+      unless @end_date.blank?
+        @sql_end_date = "created_at::date <= '#{@end_date}'"
+      end
+      unless @status.blank?
+        @status == 'Confirmé' ? 'IS NOT NULL' : 'IS NULL'
+        @sql_status = "confirmed_at #{@status}"
+      end
+    end
+
     def set_loto_search_params
       @sql_begin_date = ""
       @sql_end_date = ""

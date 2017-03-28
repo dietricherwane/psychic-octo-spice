@@ -14,7 +14,6 @@ class CmController < ApplicationController
   @@password = Parameters.first.cm3_password
   @@notification_url = Parameters.first.cm3_notification_url
   @@hub_notification_url = Parameters.first.cm3_hub_notification_url # URL vers la plateforme de Moïse
-  #@@cm3_server_url = "http://office.cm3.work:27000"
   @@cm3_server_url = Parameters.first.cm3_server_url
 
   def check_ip
