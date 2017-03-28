@@ -22,6 +22,9 @@ class GamersController < ApplicationController
     @begin_date = params[:begin_date]
     @end_date = params[:end_date]
     @status = params[:status_id]
+    @total_gamers = @gamers.count
+    @confirmed_accounts = @gamers.where("confirmed_at IS NOT NULL").count
+    @unconfirmed_accounts = @gamers.where("confirmed_at IS NULL").count
 
     params[:begin_date] = @begin_date
     params[:end_date] = @end_date
