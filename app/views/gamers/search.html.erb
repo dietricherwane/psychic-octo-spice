@@ -1,0 +1,87 @@
+<!-- Title area -->
+<div class="titleArea">
+    <div class="wrapper">
+        <div class="pageTitle">
+            <h5>Liste des joueurs</h5>
+            <span>Prise en charge des actions liées aux joueurs.</span>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="line"></div>
+
+<%= render "gamers/index_stats" %>
+
+<div class="line"></div>
+
+<!-- Main content wrapper -->
+<div class="wrapper">
+  <%= flash_messages! %>
+<!-- Widgets -->
+  <%= render "gamers_search_form" %>
+
+  <a href="<%= export_gamers_list_path %>" title="" class="wButton orangewB ml15 m10"><span>Exporter</span></a>
+  <div class="widget">
+    <div class="title"><img src="<%= asset_path 'icons/dark/full2.png' %>" alt="" class="titleIcon" /><h6>Liste des parieurs</h6></div>
+    <table cellpadding="0" cellspacing="0" border="0" class="display dTable taskWidget" id = "users_table">
+      <thead>
+        <tr>
+          <th width = "15%">Nom</th>
+          <th width = "15%">Email</th>
+          <th width = "10%">Téléphone</th>
+          <th width = "15%">Date de création</th>
+          <th width = "15%">Date d'activation</th>
+          <th width = "15%">Dernière connexion</th>
+          <th width = "10%">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% unless @gamers.blank? %>
+          <% @gamers.each do |gamer| %>
+            <tr class="gradeA">
+              <% css_class = (gamer.confirmed_at.blank? ? 'taskD' : 'taskPr') %>
+              <td class = "<%= css_class %>">
+                <strong><%= gamer.firstname %> <%= gamer.lastname %></strong>
+              </td>
+              <td>
+                <%= gamer.email %>
+              </td>
+              <td>
+                <%= gamer.msisdn %>
+              </td>
+              <td>
+                <%= gamer.created_at.strftime("%d-%m-%Y") + " à " + gamer.created_at.strftime("%Hh %Mmn") %>
+              </td>
+              <td>
+                <% unless gamer.confirmed_at.blank? %>
+                  <%= gamer.confirmed_at.strftime("%d-%m-%Y") + " à " + gamer.confirmed_at.strftime("%Hh %Mmn") %>
+                <% end %>
+              </td>
+              <td>
+                <% unless gamer.last_connection_date.blank? %>
+                  <%= gamer.last_connection_date.strftime("%d-%m-%Y") + " à " + gamer.last_connection_date.strftime("%Hh %Mmn") %>
+                <% end %>
+              </td>
+              <td class = "actBtns">
+                <a href="<%= gamer_profile_path(gamer.id) %>" class="tipS" original-title="Profil"><%= image_tag('icons/color/user-black.png', alt: '') %></a>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <!-- End Main content wrapper -->
+
+  <script type = "text/javascript">
+  $(document).ready(function() {
+    //$('#users_table').dataTable( {
+      //"bRetrieve": true,
+      //"bSort": false
+      //"bDestroy": true
+    //});
+  });
+  </script>
