@@ -14,12 +14,7 @@ class CmController < ApplicationController
   @@password = Parameters.first.cm3_password
   @@notification_url = Parameters.first.cm3_notification_url
   @@hub_notification_url = Parameters.first.cm3_hub_notification_url # URL vers la plateforme de Moïse
-  #@@cm3_server_url = "http://office.cm3.work:27000"
-<<<<<<< HEAD
-  @@cm3_server_url = "http://172.18.1.41:29000"
-=======
   @@cm3_server_url = Parameters.first.cm3_server_url
->>>>>>> 6a210acd0ae6d08fe3128e42d3484a80344d7c3b
 
   def check_ip
     remote_ip_address = request.remote_ip
