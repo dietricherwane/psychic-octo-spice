@@ -1,0 +1,40 @@
+<%= form_tag(gamers_search_path, method: :post, :class => 'form') do %>
+
+  <fieldset>
+    <div class="widget">
+      <div class="title">
+        <img src="<%= asset_path 'icons/dark/full2.png' %>" alt="" class="titleIcon" />
+        <h6>Formulaire de recherche</h6>
+      </div>
+
+      <div class="formRow">
+        <label>Date de début</label>
+        <div class="formRight">
+          <%= date_field_tag :begin_date, params[:begin_date], start_year: (Date.today.year - 10), end_year: Date.today.year, class: "form-control" %>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="formRow">
+        <label>Date de fin</label>
+        <div class="formRight">
+          <%= date_field_tag :end_date, params[:end_date], start_year: (Date.today.year - 10), end_year: Date.today.year, class: "form-control" %>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="formRow">
+        <label>Statut</label>
+        <div class="formRight">
+          <%= select_tag "status_id", options_for_select([ "Confirmé", "En attente de confirmation" ], params[:status_id]), prompt: "Veuillez choisir un statut", class: "form-control" %>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="formRow">
+        <%= submit_tag "Valider", class: 'basic' %>
+      </div>
+
+    </div>
+  </fieldset>
+<% end %>
