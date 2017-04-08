@@ -22,6 +22,7 @@ class GamersController < ApplicationController
     @begin_date = params[:begin_date]
     @end_date = params[:end_date]
     @status = params[:status_id]
+    @gamers = User.all.order("created_at DESC")
     @total_gamers = @gamers.count
     @confirmed_accounts = @gamers.where("confirmed_at IS NOT NULL").count
     @unconfirmed_accounts = @gamers.where("confirmed_at IS NULL").count
@@ -32,7 +33,7 @@ class GamersController < ApplicationController
 
     set_gamers_search_params
 
-    @gamers = User.where("#{@sql_begin_date} #{@sql_begin_date.blank? ? '' : 'AND'} #{@sql_end_date} #{@sql_end_date.blank? ? '' : 'AND'} #{@sql_status}").order("created_at DESC")
+    @gamers = User.where("#{@sql_begin_date} #{@sql_begin_date.blank? ? '' : 'AND'} #{@sql_end_date} #{@sql_status.blank? ? '' : 'AND'} #{@sql_status}").order("created_at DESC")
     flash[:success] = "#{@gamers.count} Résultat(s) trouvé(s)."
 
     if params[:commit] == "Exporter"

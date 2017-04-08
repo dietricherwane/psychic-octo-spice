@@ -163,7 +163,7 @@ class ApplicationController < ActionController::Base
 
         LogRequests.create(description: "Placement de pari sans annulation", request: @url)
 
-        request = Typhoeus::Request.new(@url, followlocation: true, method: :get, timeout: 30)
+        request = Typhoeus::Request.new(@url, followlocation: true, method: :get, timeout: 45)
 
         request.on_complete do |response|
           if response.success?
