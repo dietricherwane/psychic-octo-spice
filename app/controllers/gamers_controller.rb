@@ -45,7 +45,8 @@ class GamersController < ApplicationController
   def export_gamers_list
     @users = User.all
 
-    send_data @users.to_csv, filename: "Parieurs-#{Date.today}.csv"
+    #send_data @users.to_csv, filename: "Parieurs-#{Date.today}.csv"
+    send_data @users.to_xlsx, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
   end
 
   def profile
