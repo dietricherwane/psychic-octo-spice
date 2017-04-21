@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  acts_as_xlsx
+
   # Callbacks
   before_create :encrypt_password
 

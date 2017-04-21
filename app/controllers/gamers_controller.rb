@@ -37,7 +37,8 @@ class GamersController < ApplicationController
     flash[:success] = "#{@gamers.count} Résultat(s) trouvé(s)."
 
     if params[:commit] == "Exporter"
-      send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
+      #send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
+      send_data @gamers.to_xlsx.to_stream.read, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
     end
   end
 
