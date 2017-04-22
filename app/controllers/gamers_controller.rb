@@ -46,7 +46,10 @@ class GamersController < ApplicationController
     @users = User.all
 
     #send_data @users.to_csv, filename: "Parieurs-#{Date.today}.csv"
-    send_data @users.to_xlsx, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
+    #send_data @users.to_xlsx, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
+    respond_to do |format|
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
   end
 
   def profile
