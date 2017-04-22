@@ -10,14 +10,32 @@
         <Cell><Data ss:Type="String">ID</Data></Cell>
         <Cell><Data ss:Type="String">Nom</Data></Cell>
         <Cell><Data ss:Type="String">Prénom</Data></Cell>
-        <Cell><Data ss:Type="String">UUID</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Téléphone</Data></Cell>
+        <Cell><Data ss:Type="String">Civilité</Data></Cell>
+        <Cell><Data ss:Type="String">Sexe</Data></Cell>
+        <Cell><Data ss:Type="String">Id-parieur</Data></Cell>
+        <Cell><Data ss:Type="String">Compte-Paymoney</Data></Cell>
+        <Cell><Data ss:Type="String">Date-de-naissance</Data></Cell>
+        <Cell><Data ss:Type="String">Date-de-création</Data></Cell>
+        <Cell><Data ss:Type="String">Date-dactivation</Data></Cell>
+        <Cell><Data ss:Type="String">Date-de-dernière-connexion</Data></Cell>
       </Row>
     <% @users.each do |user| %>
       <Row>
         <Cell><Data ss:Type="Number"><%= user.id %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.firstname %></Data></Cell>
         <Cell><Data ss:Type="String"><%= user.lastname %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.email %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.msisdn %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= (user.civility.name rescue nil) %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= (user.sex.name rescue nil) %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= user.uuid %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.paymoney_account %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.birthdate %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.created_at %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.confirmed_at %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.last_connection_date %></Data></Cell>
       </Row>
     <% end %>
     </Table>
