@@ -36,9 +36,14 @@ class GamersController < ApplicationController
     @gamers = User.where("#{@sql_begin_date} #{@sql_begin_date.blank? ? '' : 'AND'} #{@sql_end_date} #{@sql_end_date.blank? ? '' : 'AND'} #{@sql_status}").order("created_at DESC")
     flash[:success] = "#{@gamers.count} Résultat(s) trouvé(s)."
 
-    if params[:commit] == "Exporter"
+    #if params[:commit] == "Exporter"
       #send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
-      send_data @gamers.to_xlsx.to_stream.read, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
+      #send_data @gamers.to_xlsx.to_stream.read, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
+    #end
+    if params[:commit] == "Exporter"
+      respond_to do |format|
+        format.xls
+      end
     end
   end
 
