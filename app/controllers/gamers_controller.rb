@@ -42,6 +42,7 @@ class GamersController < ApplicationController
     #end
     #render text: request.format
     if params[:commit] == "Exporter"
+      request.format = 'xls'
       render text: request.format
       #send_data @gamers.to_xlsx, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
       #respond_to do |format|
