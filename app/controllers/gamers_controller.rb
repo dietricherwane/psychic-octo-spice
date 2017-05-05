@@ -40,8 +40,8 @@ class GamersController < ApplicationController
       #send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
       #send_data @gamers.to_xlsx.to_stream.read, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
     #end
-    render text: request.format
-    if params[:commit] == "Exporter"
+    #render text: request.format
+    if params[:commit] != "Exporter"
       render text: request.format
       #send_data @gamers.to_xlsx, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
       #respond_to do |format|
