@@ -42,24 +42,16 @@ class GamersController < ApplicationController
     #end
     #render text: request.format
     if params[:commit] == "Exporter"
+      send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
+=begin
       request.format = "xls"
-      #respond_to do |format|
-        #format.xls do
-          #send_data @gamers.to_csv(col_sep: "\t")
-        #end
-        #format.xls do
-          #response.headers['Content-Disposition'] = "attachment; filename=Parieurs-#{Date.today}.xls"
-          #render "search.xls.erb"
-        #end
-      #end
-      #render text: request.format
-      #send_data @gamers.to_xlsx, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
       respond_to do |format|
         format.xls do
           response.headers['Content-Disposition'] = "attachment; filename=Parieurs-#{Date.today}.xls; type=application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
           render "search.xls.erb"
         end
       end
+=end
     end
   end
 
