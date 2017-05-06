@@ -79,7 +79,7 @@ class User < ActiveRecord::Base
   def self.to_csv
     attributes = %w{ID Email Nom Prénom Téléphone Civilité Sexe Id-parieur Compte-Paymoney Date-de-naissance Date-de-création Date-dactivation Date-de-dernière-connexion}
 
-    CSV.generate(headers: true) do |csv|
+    CSV.generate(headers: true, col_sep: "\t") do |csv|
       csv << attributes
 
       all.each do |user|
