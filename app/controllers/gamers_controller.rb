@@ -42,11 +42,11 @@ class GamersController < ApplicationController
     #end
     #render text: request.format
     if params[:commit] == "Exporter"
-      request.format = 'xls'
+      request.format = 'xlsx'
       respond_to do |format|
-        format.xls do
-          response.headers['Content-Disposition'] = "attachment; filename=Parieurs-#{Date.today}.xls"
-          render "search.xls.erb"
+        format.xlsx do
+          response.headers['Content-Disposition'] = "attachment; filename=Parieurs-#{Date.today}.xlsx"
+          render "search.xlsx.erb"
         end
       end
       #render text: request.format
