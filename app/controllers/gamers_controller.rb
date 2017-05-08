@@ -45,7 +45,7 @@ class GamersController < ApplicationController
       #send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
       request.format = "xls"
       respond_to do |format|
-        format.xls { send_data(@gamers.to_xls) }
+        format.xls { send_data(@gamers.to_xls, :type => "application/excel; charset=utf-8; header=present", :filename => "Parieurs-#{Date.today}.xls") }
       end
     end
   end
