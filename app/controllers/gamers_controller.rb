@@ -45,9 +45,7 @@ class GamersController < ApplicationController
       #send_data @gamers.to_csv, filename: "Parieurs-#{Date.today}.csv"
       request.format = "xls"
       respond_to do |format|
-        format.xlsx {
-            send_data @gamers.to_xlsx.to_stream.read, :filename => "Parieurs-#{Date.today}.xlsx", :type => "application/vnd.openxmlformates-officedocument.spreadsheetml.sheet"
-        }
+        format.xls { send_data(@gamers.to_xls) }
       end
     end
   end

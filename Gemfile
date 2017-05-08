@@ -45,6 +45,8 @@ gem "acts_as_xlsx"
 # User authentication
 gem 'devise'
 
+gem 'to_xls-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
