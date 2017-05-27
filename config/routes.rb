@@ -428,7 +428,8 @@ Rails.application.routes.draw do
   # SF Make a deposit
   get "/api/rff741v1b1/deposit/:game_token/:pos_id/:paymoney_account_number/:agent/:sub_agent/:date/:amount/:merchant_pos/:fee" => 'deposits#api_sf_proceed_deposit', :constraints => {:fee => /(\d+(.\d+)?)/}
 
-  get "utest" => "users#ut_test"
+  get "/administrator/parameters/list" => "parameters#index", as: :list_parameters
+  post "/administrator/parameters/set" => "parameters#update", as: :set_parameters
 
   # Payment notification
   #post '/cm3/api/dfg7fvb3191/payment/notification' => 'ludwin_api#api_coupon_payment_notification'

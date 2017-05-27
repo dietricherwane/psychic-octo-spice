@@ -19,7 +19,7 @@
 
     <!-- Left navigation -->
     <ul id="menu" class="nav">
-      <li class="dash"><a href="#" title="" class="exp" id = "<%= @administration_menu_style %>"><span>Administration</span><strong>3</strong></a>
+      <li class="dash"><a href="#" title="" class="exp" id = "<%= @administration_menu_style %>"><span>Administration</span><strong>4</strong></a>
         <ul class="sub">
           <% if @profile.create_profile_right == true %>
           <li class = "<%= @create_profile_menu_style %>"><a href="<%= new_profile_path %>" title="">Création de profil</a></li>
@@ -29,6 +29,9 @@
           <% end %>
           <% if @profile.management_right == true %>
           <li class = "<%= @roles_management_menu_style %>"><a href="<%= roles_management_path %>" title="">Gestion des droits</a></li>
+          <% end %>
+          <% if @profile.management_right == true %>
+          <li class = "<%= @list_parameters_menu_style %>"><a href="<%= list_parameters_path %>" title="">Paramétrages</a></li>
           <% end %>
         </ul>
       </li>

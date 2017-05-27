@@ -1,0 +1,1341 @@
+  [1m[36mUser Load (56.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"  WHERE "users"."id" = 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-26 23:33:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (87.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Administrators::SessionsController#new as HTML
+  Rendered administrators/sessions/new.html.erb (3669.5ms)
+Completed 200 OK in 3923ms (Views: 3729.8ms | ActiveRecord: 132.1ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2017-05-26 23:33:57 +0000
+
+
+Started GET "/assets/jquery-migrate-1.2.1.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:57 +0000
+
+
+Started GET "/assets/plugins/spinner/ui.spinner.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:57 +0000
+
+
+Started GET "/assets/plugins/spinner/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:57 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:57 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/datatable.css" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/reset.css" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/fullcalendar.css" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/ui_custom.css" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/prettyPhoto.css" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/elfinder.css" for 127.0.0.1 at 2017-05-26 23:33:58 +0000
+
+
+Started GET "/assets/plugins/charts/excanvas.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/charts/jquery.flot.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/charts/jquery.flot.orderBars.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/charts/jquery.flot.pie.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/charts/jquery.flot.resize.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/charts/jquery.sparkline.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/uniform.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/jquery.cleditor.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/jquery.validationEngine-en.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/jquery.validationEngine.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/jquery.tagsinput.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/autogrowtextarea.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/jquery.maskedinput.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/jquery.dualListBox.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/chosen.jquery.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/forms/jquery.inputlimiter.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/wizard/jquery.form.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/wizard/jquery.validate.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/wizard/jquery.form.wizard.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/uploader/plupload.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/uploader/plupload.html5.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/uploader/plupload.html4.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/uploader/jquery.plupload.queue.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/tables/datatable.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/tables/tablesort.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/tables/resizable.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.tipsy.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.collapsible.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.prettyPhoto.js?body=1" for 127.0.0.1 at 2017-05-26 23:33:59 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.progress.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.timeentry.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.jgrowl.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.breadcrumbs.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/plugins/ui/jquery.sourcerer.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/plugins/calendar.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/plugins/elfinder.min.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/charts/chart.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/backgrounds/topnavBg.png" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/icons/dark/files.png" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/backgrounds/bg.jpg" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/backgrounds/titleBg.png" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started GET "/assets/ui/usualButtons.png" for 127.0.0.1 at 2017-05-26 23:34:00 +0000
+
+
+Started POST "/administrators/sign_in" for 127.0.0.1 at 2017-05-26 23:34:03 +0000
+Processing by Administrators::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "administrator"=>{"email"=>"dietricherwane@live.fr", "password"=>"[FILTERED]"}, "commit"=>"Se connecter"}
+  [1m[35mAdministrator Load (92.4ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (40.3ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+Redirected to http://0.0.0.0:3000/dashboard
+Completed 302 Found in 500ms (ActiveRecord: 151.4ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-05-26 23:34:04 +0000
+Processing by HomeController#index as HTML
+  [1m[35mAdministrator Load (1.0ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.8ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered home/index.html.erb within layouts/administrator (0.7ms)
+Completed 200 OK in 1306ms (Views: 1297.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-26 23:34:05 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-26 23:34:06 +0000
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:34:10 +0000
+Processing by ParametersController#index as HTML
+  [1m[35mAdministrator Load (1.3ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+Completed 500 Internal Server Error in 8ms
+
+NameError (uninitialized constant ParametersController::Parameter):
+  app/controllers/parameters_controller.rb:13:in `index'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:35:27 +0000
+Processing by ParametersController#index as HTML
+  [1m[35mAdministrator Load (1.2ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.9ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mParameters Load (97.5ms)[0m  SELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1
+  Rendered parameters/index.html.erb within layouts/administrator (2.1ms)
+Completed 500 Internal Server Error in 311ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    19: <div class="wrapper">
+    20: 
+    21:   <%= flash_messages! %>
+    22:   <%= form_for(@parameter, url: set_parameters_path, html: { method: :post, class: 'form' }) do |f| %>
+    23: 
+    24:     <fieldset>
+    25:       <div class="widget">
+  app/views/parameters/index.html.erb:22:in `_app_views_parameters_index_html_erb__389645141288304120_38424080'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:37:30 +0000
+Processing by ParametersController#index as HTML
+  [1m[36mAdministrator Load (1.2ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (1.4ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mParameters Load (1.1ms)[0m  [1mSELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1[0m
+  Rendered parameters/index.html.erb within layouts/administrator (20.6ms)
+Completed 500 Internal Server Error in 223ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
+    33:         <div class="formRow">
+    34:           <label>Montant seuil de rémunération</label>
+    35:           <div class="formRight">
+    36:             <%= f.text_field :sill_amount, @parameter.sill_amount, placeholder: "Veuillez entrer le montant seuil", class: 'form-control' %>
+    37:           </div>
+    38:           <div class="clear"></div>
+    39:         </div>
+  app/views/parameters/index.html.erb:36:in `block in _app_views_parameters_index_html_erb__389645141288304120_38424080'
+  app/views/parameters/index.html.erb:22:in `_app_views_parameters_index_html_erb__389645141288304120_38424080'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.4ms)
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:38:05 +0000
+Processing by ParametersController#index as HTML
+  [1m[35mAdministrator Load (0.8ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.7ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mParameters Load (0.7ms)[0m  SELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1
+  Rendered parameters/index.html.erb within layouts/administrator (3.6ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
+    33:         <div class="formRow">
+    34:           <label>Montant seuil de rémunération</label>
+    35:           <div class="formRight">
+    36:             <%= f.text_field :sill_amount, @parameter.sill_amount, class: 'form-control' %>
+    37:           </div>
+    38:           <div class="clear"></div>
+    39:         </div>
+  app/views/parameters/index.html.erb:36:in `block in _app_views_parameters_index_html_erb__389645141288304120_57318000'
+  app/views/parameters/index.html.erb:22:in `_app_views_parameters_index_html_erb__389645141288304120_57318000'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.4ms)
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:39:42 +0000
+Processing by ParametersController#index as HTML
+  [1m[36mAdministrator Load (1.3ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.8ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mParameters Load (0.7ms)[0m  [1mSELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1[0m
+  Rendered parameters/index.html.erb within layouts/administrator (3.2ms)
+Completed 200 OK in 871ms (Views: 860.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/notifications/information.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/dark/users.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-26 23:39:43 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-26 23:39:44 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-26 23:39:44 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-26 23:39:44 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-26 23:39:44 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-26 23:39:44 +0000
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:40:01 +0000
+Processing by ParametersController#index as HTML
+  [1m[35mAdministrator Load (0.8ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.6ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mParameters Load (0.9ms)[0m  SELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1
+  Rendered parameters/index.html.erb within layouts/administrator (2.6ms)
+Completed 200 OK in 813ms (Views: 804.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-26 23:40:02 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-26 23:40:02 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-26 23:40:02 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-26 23:40:02 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-26 23:40:03 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-26 23:40:05 +0000
+Processing by ErrorsController#routing as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"50000"}, "commit"=>"Valider", "rogue_url"=>"administrator/parameters/set"}
+  Rendered public/404.html (0.6ms)
+Completed 404 Not Found in 30ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-26 23:40:19 +0000
+
+ActionController::RoutingError (uninitialized constant UpdateParametersController):
+  activesupport (4.1.8) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.8) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.8) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.8) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.8) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.8) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.8) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.8) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.8) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.8) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /home/dietrich/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/dietrich/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/dietrich/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.3ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (103.5ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (284.9ms)
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-26 23:40:49 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"50000"}, "commit"=>"Valider"}
+  [1m[36mAdministrator Load (1.2ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.7ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered parameters/index.html.erb within layouts/administrator (1.0ms)
+Completed 500 Internal Server Error in 87ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    19: <div class="wrapper">
+    20: 
+    21:   <%= flash_messages! %>
+    22:   <%= form_for(@parameter, url: set_parameters_path, html: { method: :post, class: 'form' }) do |f| %>
+    23: 
+    24:     <fieldset>
+    25:       <div class="widget">
+  app/views/parameters/index.html.erb:22:in `_app_views_parameters_index_html_erb__389645141288304120_59096420'
+  app/controllers/parameters_controller.rb:26:in `update'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.7ms)
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-26 23:41:13 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"50000"}, "commit"=>"Valider"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.6ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered parameters/index.html.erb within layouts/administrator (1.1ms)
+Completed 500 Internal Server Error in 83ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    19: <div class="wrapper">
+    20: 
+    21:   <%= flash_messages! %>
+    22:   <%= form_for(@parameter, url: set_parameters_path, html: { method: :post, class: 'form' }) do |f| %>
+    23: 
+    24:     <fieldset>
+    25:       <div class="widget">
+  app/views/parameters/index.html.erb:22:in `_app_views_parameters_index_html_erb__389645141288304120_59096420'
+  app/controllers/parameters_controller.rb:26:in `update'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:41:52 +0000
+Processing by ParametersController#index as HTML
+  [1m[36mAdministrator Load (1.2ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.6ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mParameters Load (1.2ms)[0m  [1mSELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1[0m
+  Rendered parameters/index.html.erb within layouts/administrator (2.2ms)
+Completed 200 OK in 982ms (Views: 862.3ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-26 23:41:54 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-26 23:41:55 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"50000"}, "commit"=>"Valider"}
+  [1m[35mAdministrator Load (1.2ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.7ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered parameters/index.html.erb within layouts/administrator (104.7ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    19: <div class="wrapper">
+    20: 
+    21:   <%= flash_messages! %>
+    22:   <%= form_for(@parameter, url: set_parameters_path, html: { method: :post, class: 'form' }) do |f| %>
+    23: 
+    24:     <fieldset>
+    25:       <div class="widget">
+  app/views/parameters/index.html.erb:22:in `_app_views_parameters_index_html_erb__389645141288304120_59096420'
+  app/controllers/parameters_controller.rb:28:in `update'
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.2ms)
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-26 23:59:10 +0000
+Processing by ParametersController#index as HTML
+  [1m[35mAdministrator Load (1.1ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.8ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mParameters Load (1.2ms)[0m  SELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1
+  Rendered parameters/index.html.erb within layouts/administrator (2.6ms)
+Completed 200 OK in 978ms (Views: 776.5ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-26 23:59:12 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-26 23:59:13 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-26 23:59:13 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-26 23:59:13 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-26 23:59:13 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-26 23:59:15 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"50000"}, "commit"=>"Valider"}
+  [1m[36mAdministrator Load (1.3ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.7ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mParameters Load (1.3ms)[0m  [1mSELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1[0m
+  Rendered parameters/index.html.erb within layouts/administrator (1.5ms)
+Completed 200 OK in 799ms (Views: 789.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-26 23:59:15 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/notifications/exclamation.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-26 23:59:16 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-27 00:00:38 +0000
+
+SyntaxError (/home/dietrich/workshop/psychic-octo-spice/app/controllers/parameters_controller.rb:17: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    @administration_menu_style  'active'
+                                 ^):
+  app/controllers/parameters_controller.rb:17: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+
+
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/dietrich/.rvm/gems/ruby-2.0.0-p195@rails4.0.7/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.2ms)
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-27 00:01:07 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-27 00:01:08 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-27 00:01:09 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"50000"}, "commit"=>"Valider"}
+  [1m[35mAdministrator Load (1.2ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.7ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mParameters Load (1.0ms)[0m  SELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Parameters: utf8, authenticity_token, id, parameters, commit, controller, action
+	app/controllers/parameters_controller.rb:24:in `update'
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered parameters/index.html.erb within layouts/administrator (2.1ms)
+Completed 200 OK in 973ms (Views: 766.4ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/jquery-migrate-1.2.1.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/plugins/spinner/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/plugins/spinner/ui.spinner.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/icons/notifications/accept.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-27 00:01:11 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-27 00:01:18 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"500000"}, "commit"=>"Valider"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.9ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mParameters Load (0.9ms)[0m  [1mSELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes for Parameters: utf8, authenticity_token, id, parameters, commit, controller, action
+	app/controllers/parameters_controller.rb:24:in `update'
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered parameters/index.html.erb within layouts/administrator (1.5ms)
+Completed 200 OK in 888ms (Views: 764.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:19 +0000
+
+
+Started GET "/assets/plugins/spinner/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:19 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:19 +0000
+
+
+Started GET "/assets/jquery-migrate-1.2.1.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/plugins/spinner/ui.spinner.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-27 00:01:20 +0000
+
+
+Started GET "/administrator/parameters/list" for 127.0.0.1 at 2017-05-27 00:01:28 +0000
+Processing by ParametersController#index as HTML
+  [1m[35mAdministrator Load (1.1ms)[0m  SELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.7ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mParameters Load (1.0ms)[0m  SELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1
+  Rendered parameters/index.html.erb within layouts/administrator (1.3ms)
+Completed 200 OK in 772ms (Views: 764.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/jquery-migrate-1.2.1.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/plugins/spinner/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/plugins/spinner/ui.spinner.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-27 00:01:29 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-27 00:02:02 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"500000"}, "commit"=>"Valider"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.5ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mParameters Load (0.7ms)[0m  [1mSELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "parameters" SET "sill_amount" = $1, "updated_at" = $2 WHERE "parameters"."id" = 1[0m  [["sill_amount", 500000.0], ["updated_at", "2017-05-27 00:02:03.309728"]]
+  [1m[35m (11.6ms)[0m  COMMIT
+  Rendered parameters/index.html.erb within layouts/administrator (2.4ms)
+Completed 200 OK in 980ms (Views: 780.7ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/jquery-migrate-1.2.1.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/plugins/spinner/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/plugins/spinner/ui.spinner.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-27 00:02:04 +0000
+
+
+Started POST "/administrator/parameters/set" for 127.0.0.1 at 2017-05-27 00:02:12 +0000
+Processing by ParametersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyKrLcv1aQTZRuLu/2zw5mP+hCk5yMCfWFkmlHDnlBg=", "id"=>"1", "parameters"=>{"sill_amount"=>"50000056"}, "commit"=>"Valider"}
+  [1m[36mAdministrator Load (1.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators"  WHERE "administrators"."id" = 1  ORDER BY "administrators"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.9ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mParameters Load (1.1ms)[0m  [1mSELECT  "parameters".* FROM "parameters"   ORDER BY "parameters"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "parameters" SET "sill_amount" = $1, "updated_at" = $2 WHERE "parameters"."id" = 1[0m  [["sill_amount", 50000056.0], ["updated_at", "2017-05-27 00:02:12.654538"]]
+  [1m[35m (38.9ms)[0m  COMMIT
+  Rendered parameters/index.html.erb within layouts/administrator (3.3ms)
+Completed 200 OK in 781ms (Views: 727.0ms | ActiveRecord: 43.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/jquery-migrate-1.2.1.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/plugins/spinner/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/plugins/spinner/ui.spinner.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/icons/topnav/profile.png" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/icons/topnav/logout.png" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/loginLogo.png" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/icons/light/stats.png" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/jquery-ui.min.js?body=1" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/icons/light/home.png" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/icons/light/pencil.png" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/icons/light/alert.png" for 127.0.0.1 at 2017-05-27 00:02:13 +0000
+
+
+Started GET "/assets/icons/light/fullscreen.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/icons/light/frames.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/icons/light/users.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/icons/light/files.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/icons/light/create.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/backgrounds/leftTop.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/backgrounds/bodyBg.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/sidebarSep.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/divider.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/arrow.gif" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/backgrounds/navItemBg.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000
+
+
+Started GET "/assets/backgrounds/respNavBg.png" for 127.0.0.1 at 2017-05-27 00:02:14 +0000

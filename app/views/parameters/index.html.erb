@@ -1,0 +1,49 @@
+<div class="titleArea">
+    <div class="wrapper">
+        <div class="pageTitle">
+            <h5>Paramétrages</h5>
+            <span>Mettre à jour les paramètres de l'application.</span>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="line"></div>
+
+<%#= render "administrators/shared/administrator_menu.html.erb" %>
+
+<div class="line"></div>
+
+<!-- Main content wrapper -->
+<div class="wrapper">
+
+  <%= flash_messages! %>
+  <%= form_for(@parameter, url: set_parameters_path, html: { method: :post, class: 'form' }) do |f| %>
+
+    <fieldset>
+      <div class="widget">
+        <div class="title">
+          <img src="<%= asset_path 'icons/dark/users.png' %>" alt="" class="titleIcon" />
+          <h6>Formulaire de mise à jour des paramétrages</h6>
+        </div>
+
+        <%= hidden_field_tag :id, @parameter.id %>
+
+        <div class="formRow">
+          <label>Montant seuil de rémunération</label>
+          <div class="formRight">
+            <%= f.text_field :sill_amount, placeholder: "Veuillez entrer le montant seuil", class: 'form-control' %>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="formRow">
+          <%= f.submit "Valider", class: 'basic' %>
+        </div>
+      </div>
+    </fieldset>
+  <% end %>
+
+</div>
+<!-- End Main content wrapper -->
