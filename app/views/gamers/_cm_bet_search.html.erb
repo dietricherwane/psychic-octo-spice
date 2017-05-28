@@ -28,7 +28,7 @@
       <div class="formRow">
         <label>Statut</label>
         <div class="formRight">
-          <%= select_tag "status_id", options_for_select([ "En cours", "Annulé", "Perdant", "Gagnant" ], params[:status_id]), prompt: "Veuillez choisir un statut", class: "form-control" %>
+          <%= select_tag "status_id", options_for_select([ "En cours", "Annulé", "Perdant", "Gagnant", "Remboursé" ], params[:status_id]), prompt: "Veuillez choisir un statut", class: "form-control" %>
         </div>
         <div class="clear"></div>
       </div>

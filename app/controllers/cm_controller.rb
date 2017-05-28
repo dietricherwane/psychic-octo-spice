@@ -613,7 +613,6 @@ class CmController < ApplicationController
     bets = Cm.where("p_validated IS NULL AND serial_number IS NOT NULL AND program_id = '#{@program_id}' AND race_id = '#{@race_id}' AND bet_status = 'En cours'")
     cancelled_bets = Cm.where("cancelled IS TRUE AND serial_number IS NOT NULL AND program_id = '#{@program_id}' AND race_id = '#{@race_id}'")
     unless bets.blank?
-
       bets_amount = bets.map{|bet| (bet.amount.to_f rescue 0)}.sum rescue 0
       cancelled_amount =  0 #cancelled_bets.map{|bet| (bet.amount.to_f rescue 0)}.sum rescue 0
       if validate_bet_cm3("McoaDIET", bets_amount, @program_id, @race_id)
@@ -626,7 +625,8 @@ class CmController < ApplicationController
 
               bet = Cm.where("sale_client_id = '#{winning.at('transactionId').content}' AND serial_number = '#{winning.at('serialNumber').content}' AND p_validated IS TRUE AND bet_status = 'En cours'").first rescue nil
               unless bet.blank?
-                bet.update_attributes(win_reason: winning.at('reason').content, win_amount: winning.at('amount').content, bet_status: "Gagnant")
+                set_bet_status(winning.at('reason').content)
+                bet.update_attributes(win_reason: winning.at('reason').content, win_amount: winning.at('amount').content, bet_status: @bet_status)
                 bet_id = winning.at('betId').content rescue nil
 
                 #unless bet_ids.blank?
@@ -658,6 +658,17 @@ class CmController < ApplicationController
         @validated = false
       end
     end
+  end
+
+  def set_bet_status(reason)
+    @bet_status = ''
+    if reason == "WIN"
+      @bet_status = 'Gagnant'
+    end
+    if reason == "REFUND"
+      @bet_status = 'Remboursé'
+    end
+    return @bet_status
   end
 
   def api_notify_session
